@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #444141;
+    color: white;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+nav a {
+    color: #e5e5e5;
+    margin-left: 35px;
+    text-decoration: none;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b896d3;
+}
+
+.btn-cv {
+    padding: 8px 20px;
+    border: 1px solid white;
+    border-radius: 25px;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-cv:hover {
+    background: white;
+    color: black;
+}
+
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 20px;
+}
+
+.badge::before {
+    content: "●";
+    color: #b896d3;
+    margin-right: 8px;
+}
+
+.milieu {
+    margin-top: 70px;
+    padding: 0 60px;
+    display: flex;               /* active Flexbox */
+    flex-direction: column;      /* empile les éléments verticalement */
+    justify-content: center;     /* centre verticalement */
+    align-items: center;         /* centre horizontalement */        
+    text-align: center; 
+}
+
+.milieu h1 {
+    font-size: 65px;
+    font-weight: 700;
+    width: 80%;
+    line-height: 1.1;
+}
+
+.milieu p {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 17px;
+    color: #dcdcdc;
+}
+
+.btn {
+    background: #b896d3;
+    padding: 12px 25px;
+    color: black;
+    display: inline-block;
+    border-radius: 30px;
+    margin-top: 25px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(12px);
+}
+
+.bottom-nav a {
+    margin: 0 20px;
+    color: #b896d3;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+/* Appliquer à tous les éléments qu’on veut faire glisser */
+.slide-in {
+  transform: translateY(-50px); /* position de départ (au-dessus) */
+  opacity: 0;                  /* invisible au départ */
+  animation: slideIn 0.6s ease-out forwards; /* animation */
+}
+
+
+
+/* Définition de l'animation */
+@keyframes slideIn {
+  to {
+    transform: translateY(0); /* position finale */
+    opacity: 1;               /* visible */
+  }
+}
+
+.proj{
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    text-align: left;
+    width: 100%;           
+    box-sizing: border-box;
+}
+
+.proj img {
+    width: 400px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.proj-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.proj-text {
+    flex: 1;
+}
+
+/* Sections parcours (empilées) */
+.parcours-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.parcours-section {
+    padding: 28px;
+    border: 2px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.02);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.parcours-section h2 {
+    margin-top: 0;
+    color: #b896d3;
+}
+
+.tags {
+    position: fixed; /* reste en place lors du scroll */
+    bottom: 70px; 
+    display: flex;
+    flex-wrap: wrap;      
+    gap: 10px;            
+    justify-content: right;  
+    right: 20px;
+    max-width: 90%;
+    padding: 6px 8px;
+    z-index: 60;
+}
+
+.tag {
+    padding: 6px 15px;
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;  
+    font-size: 14px;
+    color: #fff;         
+    backdrop-filter: blur(4px); 
+    transition: 0.25s;
+}
+
+
+.tag:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+a {
+    color: #ffffff; 
+}
+
+.card {
+    /* allow flex layout to control card size */
+    flex: 0 1 350px; /* grow 0, shrink 1, basis 350px */
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.card-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+.card-content {
+    padding: 15px;
+    background: #0a0a0a;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+
+.contact-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0 60px; 
+    box-sizing: border-box;
+}
+
+.contact-cards {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.contact-item {
+    padding: 18px;
+    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.02);
+}
+
+.contact-item h3 {
+    margin: 0 0 8px 0;
+    color: #b896d3;
+}
+
+.contact-bottom {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.contact-socials a { 
+    color: #b896d3; 
+    text-decoration: none; 
+    margin-right: 10px; 
+}
+
+.contact-map {
+    flex: 1;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(255,255,255,0.06);
+    border-radius: 12px;
+    background: rgba(0,0,0,0.02);
+    padding: 8px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    border: 2px solid rgba(255,255,255,0.06);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.01);
+    box-sizing: border-box;
+}
+
+.contact-form form { display: flex; flex-direction: column; gap: 10px; }
+.contact-form label { font-size: 14px; font-weight: 600; }
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    color: inherit;
+    box-sizing: border-box;
+}
+.contact-form input:focus, .contact-form textarea:focus { outline: none; box-shadow: 0 0 0 3px rgba(184,150,211,0.08); }
+
+.contact-form .btn { width: 160px; }
+
+
+/* integrate nicely in .milieu */
+.milieu .contact-info { padding-top: 18px; }
+
+.cards-container {
+    display: flex;          /* Aligne les éléments sur une ligne */
+    flex-wrap: wrap;        /* Permet de passer à la ligne si l'écran est trop petit */
+    justify-content: center;/* Centre les cartes */
+    gap: 30px;              /* Espace entre cartes */
+    margin-top: 30px;
+}
+
+.milieu_procedures {
+    margin-top: 70px;
+    padding: 0 60px;
+    text-align: center;
+}
